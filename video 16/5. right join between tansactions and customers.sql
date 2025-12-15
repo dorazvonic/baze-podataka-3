@@ -1,3 +1,3 @@
 select *
 from transactions right join customers
-on transactions.customer_id = customer_id;
+on transactions.customer_id = customer_id; f

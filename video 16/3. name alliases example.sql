@@ -4,3 +4,5 @@ on t.customer_id = c.id;
 
 select c.first_name, c.last_name
 from customers c;
+
+zd
