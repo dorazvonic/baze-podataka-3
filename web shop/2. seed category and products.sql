@@ -1,0 +1,37 @@
+insert into category(name) 
+values("Monitors"),
+      ("Graphics cards"),
+      ("Keyboards");
+
+
+INTO product (name, description, price, stock, category_id) VALUES
+('Dell UltraSharp 27"', '27-inch IPS monitor with QHD resolution and accurate colors', 399.99, 15, 1),
+('LG 24MP60G-B 24"', '24-inch Full HD IPS monitor with thin bezels', 189.99, 25, 1),
+('Samsung Odyssey G5 32"', '32-inch curved gaming monitor with 144Hz refresh rate', 349.99, 10, 1),
+('ASUS TUF Gaming VG27AQ', '27-inch gaming monitor with 165Hz and G-Sync support', 429.99, 12, 1),
+('AOC 24G2U 24"', '24-inch gaming monitor with IPS panel and 144Hz', 199.99, 30, 1),
+('BenQ PD2700Q 27"', 'Professional 27-inch QHD monitor for designers', 449.99, 8, 1),
+('MSI Optix MAG274QRF-QD', 'High-end gaming monitor with Quantum Dot technology', 499.99, 6, 1),
+('HP X27q 27"', 'QHD gaming monitor with 165Hz refresh rate', 289.99, 20, 1),
+('Gigabyte M28U 28"', '4K UHD gaming monitor with 144Hz refresh rate', 549.99, 5, 1),
+('ViewSonic VX2458-C-MHD', '24-inch curved gaming monitor with 144Hz', 179.99, 18, 1),
+('NVIDIA RTX 4090', 'Flagship GPU for 4K gaming and professional workloads', 1899.99, 3, 2),
+('NVIDIA RTX 4080', 'High-performance GPU with ray tracing support', 1299.99, 5, 2),
+('NVIDIA RTX 4070 Ti', 'Powerful graphics card for high-end gaming', 899.99, 7, 2),
+('AMD Radeon RX 7900 XTX', 'Top-tier AMD GPU for 4K and VR gaming', 999.99, 6, 2),
+('AMD Radeon RX 7800 XT', 'High-performance GPU with excellent price-performance ratio', 649.99, 10, 2),
+('NVIDIA RTX 3060', 'Mid-range GPU suitable for 1080p and 1440p gaming', 329.99, 14, 2),
+('AMD Radeon RX 6600', 'Affordable GPU for smooth 1080p gaming', 249.99, 16, 2),
+('NVIDIA RTX 3050', 'Entry-level ray tracing graphics card', 279.99, 12, 2),
+('AMD Radeon RX 6700 XT', 'High-refresh-rate gaming GPU for 1440p', 379.99, 9, 2),
+('NVIDIA GTX 1660 Super', 'Reliable GPU for esports and casual gaming', 219.99, 11, 2),
+('Logitech G Pro X Mechanical', 'Mechanical keyboard with hot-swappable switches', 149.99, 20, 3),
+('Razer Huntsman Mini', 'Compact 60% keyboard with optical switches', 129.99, 22, 3),
+('Corsair K70 RGB MK.2', 'Mechanical RGB keyboard with aluminum frame', 169.99, 15, 3),
+('SteelSeries Apex Pro', 'Mechanical keyboard with adjustable actuation switches', 199.99, 10, 3),
+('HyperX Alloy FPS Pro', 'Compact mechanical keyboard designed for FPS gaming', 99.99, 25, 3),
+('Keychron K6 Wireless', 'Wireless mechanical keyboard with RGB lighting', 89.99, 30, 3),
+('Ducky One 2 Mini', 'Popular 60% mechanical keyboard for enthusiasts', 119.99, 18, 3),
+('Logitech G213', 'Membrane gaming keyboard with RGB lighting', 59.99, 40, 3),
+('Redragon K552 Kumara', 'Affordable mechanical keyboard with compact layout', 49.99, 35, 3),
+('ASUS ROG Strix Scope', 'Gaming keyboard optimized for FPS players', 139.99, 14, 3);
