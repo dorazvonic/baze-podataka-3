@@ -4,7 +4,7 @@ values("Monitors"),
       ("Keyboards");
 
 
-INTO product (name, description, price, stock, category_id) VALUES
+insert into product (name, description, price, stock, category_id) VALUES
 ('Dell UltraSharp 27"', '27-inch IPS monitor with QHD resolution and accurate colors', 399.99, 15, 1),
 ('LG 24MP60G-B 24"', '24-inch Full HD IPS monitor with thin bezels', 189.99, 25, 1),
 ('Samsung Odyssey G5 32"', '32-inch curved gaming monitor with 144Hz refresh rate', 349.99, 10, 1),

@@ -4,6 +4,7 @@ from product
 inner join category 
 on product.category_id = category.id;
 
+
 -- prikazuje samo odreena polja iz obe tablice
 select product.name, 
 product.price, 
@@ -12,6 +13,7 @@ category.name
 from product
 inner join category 
 on product.category_id = category.id;
+
 
 -- koristimo name alisas kako bi smanjili tipkanje
 select p.name, 
