@@ -4,36 +4,41 @@ id int primary key auto_increment,
 name varchar(400) not null unique,
 product_id int,
 is_cover boolean,
+-- ako je dodano on delete cascade pri definiciji stranog ključa
+-- pri brisanju proizvoda se brišu i njegove slike u ovoj tablici
 foreign key (product_id) references product(id) on delete cascade
 );
 
--- seed product images from product id = 2
+-- seed product images for product id = 2
 insert into product_image (name, product_id, is_cover)
 values
 	("image1.jpg", 2, true),
     ("image2.jpg", 2, false),
     ("image3.jpg", 2, false);
 
--- brise proizvod sa id = 2 i u isto vrijeme iz tablice product_image brise sve slike za taj proizvod ako ih ima
--- ako
+-- briše proizvod sa id = 2 i u isto vrijeme
+-- iz tablice product_image briše sve slike za taj proizvod ako ih ima
+
+
 delete from product
 where id = 2;
 
--- rjesenje za brisanje proizvoda ako nema delete cascade na stranom ključu
--- pobrisati sve slike za taj proizvod pa nakoon toga pobrisati i proizvod
-delete product_image
+-- rješenje za brisanje proizvoda ako nema on delete cascade na stranom ključu
+-- pobrisati sve slike za taj proizvod pa nakon toga pobrisati i proizvod
+delete from product_image
 where product_id = 2;
 delete from product
 where id = 2;
 
--- prikazuje podatke iz obe tablice cak i da nema podataka(slika) u drugoj tablici
+-- left join: prikazuje podatke iz obe tablice i u slučaju da nema podataka u drugoj tablici.
+-- u ovom primjeru tablica product_image ne mora imati slike za sve proizvode 
 select p.name, p.price, pi.name
-from product p 
+from product p
 left join product_image pi
 on pi.product_id = p.id;
 
--- prikazuje samo one proizvode koji imaju sliku u p.image
+-- join: prikazuje samo proizvode koji imaju slike u tablici product_image
 select p.name, p.price, pi.name
-from product p 
+from product p
 join product_image pi
 on pi.product_id = p.id;
